@@ -2,5 +2,9 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#d6d1d2</color>
+    <color name="colorAnimationcolor">#000000</color>
+    <color name="colorLogin_text">#000000</color>
+    <color name="colorupload_skip_text">#627EAC</color>
+    <color name="colorupload_popupwindos">#00000000</color>
 </resources>

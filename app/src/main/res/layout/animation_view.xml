@@ -6,9 +6,10 @@
     android:orientation="vertical"
     android:background="@drawable/animation_shape"
     android:gravity="center"
-    android:minHeight="180dp"
-    android:minWidth="180dp"
-    android:padding="10dp">
+    android:minHeight="@dimen/dp_100"
+    android:minWidth="@dimen/dp_100"
+
+    android:padding="@dimen/dp_10">
 
         <!--<com.zyao89.view.zloading.ZLoadingView
             android:id="@+id/animation_zloadimgview"
@@ -27,12 +28,19 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:id="@+id/AVLoadingIndicatorView"
-            app:indicatorColor="#1390ea"
-            app:indicatorName="BallGridPulseIndicator"/>
-
+            app:indicatorColor="@color/colorAnimationcolor"
+            app:indicatorName="SemiCircleSpinIndicator"/>
+    <!--<com.zyao89.view.zloading.ZLoadingView
+        android:id="@+id/loadingView_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:z_type="ElasticBallBuilder"
+        app:z_color="@android:color/holo_green_light"/>
+-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/colorAnimationcolor"
             android:text="正在加载..." />
     </LinearLayout>

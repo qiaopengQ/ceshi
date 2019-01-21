@@ -35,6 +35,7 @@ public abstract class BaseActivity <V, P extends BasePresenter<V>> extends AppCo
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewGroup view= (ViewGroup) LayoutInflater.from(this).inflate(createLayoutId(),null);
+
         setContentView(view);
         bind = ButterKnife.bind(this);
         CreateLoadingAnimtion(this);
@@ -57,7 +58,6 @@ public abstract class BaseActivity <V, P extends BasePresenter<V>> extends AppCo
         dialog.setCancelable(false);
  /*       dialog.setContentView(viewa, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT));*/
-        avloadingIndicatorView.smoothToShow();
         dialog = new Dialog(context, R.style.loading_dialog_style);
         dialog.setCancelable(false);
         dialog.setContentView(viewa, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
