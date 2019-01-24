@@ -90,6 +90,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             /*decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN| View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
             getWindow().setStatusBarColor(Color.TRANSPARENT);*/
         }
+        changeStatusBarTextColor(true);
         UMConfigure.init(this, UMConfigure.DEVICE_TYPE_PHONE, "5c43d26cf1f55625dd000459");
         UMConfigure.setLogEnabled(true);
         UMConfigure.setEncryptEnabled(true);
@@ -102,7 +103,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         ButterKnife.bind(this);
         initData();
     }
-
+    //修改安卓状态栏字体
+    private void changeStatusBarTextColor(boolean isBlack) {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+            if (isBlack) {
+                getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);//设置状态栏黑色字体
+            }else {
+                getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);//恢复状态栏白色字体
+            }
+        }
+    }
     private void initData() {
 
         final String code = edtextCode.getText().toString();

@@ -7,7 +7,6 @@
         tools:ignore="ProtectedPermissions" />
     <!--获取内存权限-->
     <uses-permission android:name="android.intent.category.DEFAULT" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -21,7 +20,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
     <application
         android:name=".global.MyApp"
@@ -31,18 +30,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity
-            android:name=".activity.LoginActivity"
-            android:theme="@style/NoAppTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.UploadingImaActivity"
-            android:theme="@style/NoAppTheme"></activity>
+        <activity
+            android:name=".activity.LoginActivity">
+
+        </activity>
+        <activity android:name=".activity.UploadingImaActivity">
+
+        </activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.hxd.pictest.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <!--
         <meta-data android:value="5c43d26cf1f55625dd000459" android:name="UMENG_APPKEY"/>
@@ -96,17 +106,6 @@
             </intent-filter>
         </activity>
         -->
-    <provider
-        android:name="android.support.v4.content.FileProvider"
-        android:authorities="com.lele.avatarcircledemo.fileprovider"
-        android:exported="false"
-        android:grantUriPermissions="true"
-        >
-        <meta-data
-            android:name="android.support.FILE_PROVIDER_PATHS"
-            android:resource="@xml/filepaths"
-            />
-    </provider>
     </application>
 
 

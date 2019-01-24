@@ -7,4 +7,18 @@
     <string name="user_name">请输入用户名</string>
     <string name="uploading_text">上传头像</string>
     <string name="uploading_skip">跳过</string>
+    <string name="popup_text">确认使用默认用户名</string>
+    <string name="popup_button_text">使用</string>
+    <string name="popup_button_alter">去修改</string>
+    <string name="popup_textuser">\"user45872361\"?</string>
+    <string name="popup_successfully">登录成功</string>
+    <string name="popup_welcome">欢迎使用第一通航</string>
+    <string name="action_settings">搜索</string>
+    <string name="message_text">资讯</string>
+    <string name="topic_text">话题</string>
+    <string name="circle_text">圈子</string>
+    <string name="my_text">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -52,10 +52,8 @@ public abstract class BaseActivity <V, P extends BasePresenter<V>> extends AppCo
 
     protected void CreateLoadingAnimtion(Context context) {
         View viewa = LayoutInflater.from(context).inflate(R.layout.animation_view, null);
-        AVLoadingIndicatorView avloadingIndicatorView = viewa.findViewById(R.id.AVLoadingIndicatorView);
+        AVLoadingIndicatorView avloadingIndicatorView = viewa.findViewById(R.id.AVLoadingIndicatorView_);
         avloadingIndicatorView.smoothToShow();
-        dialog = new Dialog(context, R.style.loading_dialog_style);
-        dialog.setCancelable(false);
  /*       dialog.setContentView(viewa, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT));*/
         dialog = new Dialog(context, R.style.loading_dialog_style);

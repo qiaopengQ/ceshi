@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:background="@drawable/animation_shape"
     android:gravity="center"
+    android:id="@+id/animation_layout_view"
     android:minHeight="@dimen/dp_100"
     android:minWidth="@dimen/dp_100"
 
@@ -27,9 +28,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:id="@+id/AVLoadingIndicatorView"
+            android:id="@+id/AVLoadingIndicatorView_"
             app:indicatorColor="@color/colorAnimationcolor"
-            app:indicatorName="SemiCircleSpinIndicator"/>
+            app:indicatorName="BallScaleRippleMultipleIndicator"/>
     <!--<com.zyao89.view.zloading.ZLoadingView
         android:id="@+id/loadingView_1"
         android:layout_width="wrap_content"

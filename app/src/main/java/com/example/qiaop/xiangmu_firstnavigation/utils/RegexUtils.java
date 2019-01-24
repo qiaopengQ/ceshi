@@ -131,4 +131,8 @@ public class RegexUtils {
         String regex = "[1-9](\\d{1,2})?\\.(0|([1-9](\\d{1,2})?))\\.(0|([1-9](\\d{1,2})?))\\.(0|([1-9](\\d{1,2})?))";
         return Pattern.matches(regex, ipAddress);
     }
+    public static boolean checkEmoji(String Emoji) {
+        String regex = "[\\ud83c\\udc00-\\ud83c\\udfff]|[\\ud83d\\udc00-\\ud83d\\udfff]|[\\u2600-\\u27ff]";
+        return Pattern.matches(regex, Emoji);
+    }
 }

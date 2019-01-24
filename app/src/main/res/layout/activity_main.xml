@@ -1,10 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="#D53D3C">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_70"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/toolbar_login"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_17"
+            android:layout_height="@dimen/dp_17"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:id="@+id/seek_main"
+            android:src="@mipmap/seek_logn" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpage_main"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/radiogroup_main"
+        android:layout_alignParentStart="true"
+        tools:ignore="RtlCompat" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/message_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/message_select"
+            android:gravity="center_horizontal"
+            android:text="@string/message_text"
+            android:textColor="@drawable/messagetext_color" />
+
+        <RadioButton
+
+            android:id="@+id/topic_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/topic_selected"
+            android:gravity="center_horizontal"
+            android:text="@string/topic_text"
+            android:textColor="@drawable/messagetext_color" />
+
+        <RadioButton
+            android:id="@+id/circle_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/circle_selected"
+            android:gravity="center_horizontal"
+            android:text="@string/circle_text"
+            android:textColor="@drawable/messagetext_color" />
+
+        <RadioButton
+            android:id="@+id/my_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/my_selected"
+            android:gravity="center_horizontal"
+            android:text="@string/my_text"
+            android:textColor="@drawable/messagetext_color" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>

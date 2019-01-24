@@ -3,8 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#d6d1d2</color>
-    <color name="colorAnimationcolor">#000000</color>
+    <color name="colorAnimationcolor">#787676</color>
     <color name="colorLogin_text">#000000</color>
     <color name="colorupload_skip_text">#627EAC</color>
-    <color name="colorupload_popupwindos">#00000000</color>
+    <color name="colorupload_popupwindos">#EDFFFFFF</color>
+    <color name="popup_use_textcolor">#2450A2</color>
+    <color name="popup_filter_window">#BEBAB9</color>
+    <color name="theme_colors">#D53D3C</color>
+    <color name="tablayout_text">#D53D3C</color>
+    <color name="text_unselected_color">#8E8E8E</color>
+    <color name="text_selected_color">#D71408</color>
 </resources>

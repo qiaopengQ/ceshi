@@ -4,14 +4,15 @@ import com.example.qiaop.xiangmu_firstnavigation.base.presenter.BasePresenter;
 import com.example.qiaop.xiangmu_firstnavigation.contact.ListNewsInterFace;
 import com.example.qiaop.xiangmu_firstnavigation.entity.ListDataBean;
 import com.example.qiaop.xiangmu_firstnavigation.model.IListNewsModel;
+import com.example.qiaop.xiangmu_firstnavigation.model.IModel;
 
 public class IListNewsPresenter<V extends ListNewsInterFace.ListNewsView> extends BasePresenter<V> implements ListNewsInterFace.ListNewsPresenter,ListNewsInterFace.ListNewsModel{
-    private IListNewsModel listNewsModel = new IListNewsModel();
+    private IModel iModel = new IModel();
     @Override
     public void getListNewsTab(String json) {
         if (view!=null){
             view.ShowLoadingAnimtion();
-            listNewsModel.getListNewsChanne(json,this);
+            iModel.getListNewsChanne(json,this);
         }
     }
 
