@@ -29,18 +29,18 @@ public class HttpUtils {
         }
         return requestBody;
     }
-    public RequestBody getFormBody(Map<String,Object> map){
+   /* public RequestBody getFormBody(Map<String,Object> map){
         RequestBody requestBody = null;
         if (map!=null){
             for (String s:map.keySet()) {
 
             }
-            /*requestBody=new FormBody.Builder()
-                    .add("","");*/
+            *//*requestBody=new FormBody.Builder()
+                    .add("","");*//*
 
         }
         return requestBody;
-    }
+    }*/
     public RequestBody getFormData(File file, String userId){
         RequestBody requestBody = null;
             if (userId!=null){

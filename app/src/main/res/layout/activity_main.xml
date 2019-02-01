@@ -32,14 +32,13 @@
 
     </RelativeLayout>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpage_main"
+    <FrameLayout
+        android:id="@+id/fra"
         android:layout_marginTop="@dimen/dp_40"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/radiogroup_main"
-        android:layout_alignParentStart="true"
-        tools:ignore="RtlCompat" />
+        />
 
     <RadioGroup
         android:id="@+id/radiogroup_main"

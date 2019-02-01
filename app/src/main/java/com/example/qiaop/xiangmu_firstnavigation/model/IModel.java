@@ -17,7 +17,7 @@ import java.io.File;
 import java.util.Map;
 
 public class IModel {
-
+    //新闻标题
     public void getListNewsChanne(String json, final ListNewsInterFace.ListNewsModel listNewsModel){
         HttpManager.getInstance().getServer().getListNewsBean(HttpUtils.getInstance().getJsonBody(json))
                 .compose(RxUtils.<HttpResponse<ListDataBean>>rxScheduleThread())
@@ -29,6 +29,7 @@ public class IModel {
                     }
                 });
     }
+    //上传头像
     public void getListHeaderImageChanne(String userId, File file, final ListHeaderImageInterFace.ShowModel showModel){
         HttpManager.getInstance().getServer().getImageFile(HttpUtils.getInstance().getFormData(file,userId))
                 .compose(RxUtils.<HttpResponse<ListHeaderImageChannel>>rxScheduleThread())
@@ -41,6 +42,7 @@ public class IModel {
                 });
 
     }
+    //新闻刷新加载接口
     public void getRefreshtheloadList(Map<String,Object> map, final RefreshtheloadApi refreshtheloadApi, final RefreshtheloadFace.ShowModel showModel){
         String  url = (String) map.get("url");
         String json = (String) map.get("json");

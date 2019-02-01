@@ -12,6 +12,7 @@ import com.example.qiaop.xiangmu_firstnavigation.R;
 /**
  * A simple {@link Fragment} subclass.
  */
+//圈子
 public class Circle_Fragment extends Fragment {
 
 

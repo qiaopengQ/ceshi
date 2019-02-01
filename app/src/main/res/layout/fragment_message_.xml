@@ -14,7 +14,7 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/tablayout_message"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_40"
+            android:layout_height="@dimen/dp_43"
             android:layout_alignParentTop="true"
             android:layout_marginTop="0dp"
             android:layout_toStartOf="@+id/img_shade"
@@ -43,8 +43,8 @@
             android:src="@mipmap/shade_seek" />
 
         <ImageView
-            android:layout_width="@dimen/dp_40"
-            android:layout_height="@dimen/dp_40"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="0dp"
@@ -60,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="@dimen/dp_40"
         tools:ignore="RtlCompat" />
 

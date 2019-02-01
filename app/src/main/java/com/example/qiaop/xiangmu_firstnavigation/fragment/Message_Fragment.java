@@ -27,6 +27,7 @@ import butterknife.Unbinder;
 /**
  * A simple {@link Fragment} subclass.
  */
+//资讯
 public class Message_Fragment extends BaseFragment<ListNewsInterFace.ListNewsView, IListNewsPresenter<ListNewsInterFace.ListNewsView>> implements ListNewsInterFace.ListNewsView {
     @BindView(R.id.tablayout_message)
     TabLayout tablayoutMessage;
@@ -71,16 +72,6 @@ public class Message_Fragment extends BaseFragment<ListNewsInterFace.ListNewsVie
         fragmentStaeAdapter = new FragmentStaeAdapter(getChildFragmentManager(),fragments,strings);
         viewpageMessage.setAdapter(fragmentStaeAdapter);
         tablayoutMessage.setupWithViewPager(viewpageMessage);
-        Log.e("22222222", "strings:" + strings);
-        /*List<ListDataBean.NewsChannelListBean> newsChannelList = listDataBean.getNewsChannelList();
-        for (int i = 0; i < newsChannelList.size(); i++) {
-            strings.add(newsChannelList.get(i).getChannelName());
-            fragments.add(new Reuse_Fragment());
-        }
-        Log.e("Message_Fragment", "strings:" + strings);
-
-
-        Log.e("标题", "listDataBean:" + listDataBean);*/
     }
 
     @Override
@@ -88,7 +79,7 @@ public class Message_Fragment extends BaseFragment<ListNewsInterFace.ListNewsVie
 
     }
 
-    @Override
+    /*@Override
     public void ShowLoadingAnimtion() {
         dialog.show();
     }
@@ -96,7 +87,7 @@ public class Message_Fragment extends BaseFragment<ListNewsInterFace.ListNewsVie
     @Override
     public void HideLoadingAnimtion() {
         dialog.hide();
-    }
+    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -104,11 +95,5 @@ public class Message_Fragment extends BaseFragment<ListNewsInterFace.ListNewsVie
         View rootView = super.onCreateView(inflater, container, savedInstanceState);
         unbinder = ButterKnife.bind(this, rootView);
         return rootView;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
     }
 }

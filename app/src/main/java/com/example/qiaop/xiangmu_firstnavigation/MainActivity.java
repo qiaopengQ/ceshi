@@ -1,8 +1,10 @@
 package com.example.qiaop.xiangmu_firstnavigation;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -26,9 +28,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends BaseActivity<ListNewsInterFace.ListNewsView, IListNewsPresenter<ListNewsInterFace.ListNewsView>> implements ListNewsInterFace.ListNewsView, RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.seek_main)
+   /* @BindView(R.id.seek_main)
     ImageView seekMain;
     @BindView(R.id.relativeLayout)
     RelativeLayout relativeLayout;
@@ -43,53 +45,19 @@ public class MainActivity extends BaseActivity<ListNewsInterFace.ListNewsView, I
     @BindView(R.id.my_main)
     RadioButton myMain;
     @BindView(R.id.radiogroup_main)
-    RadioGroup radiogroupMain;
+    RadioGroup radiogroupMain;*/
     private List<Fragment> fragments = new ArrayList<>();
-
-    @Override
+    /*@Override
     protected void initEventAndData() {
-        radiogroupMain.setOnCheckedChangeListener(this);
         fragments.add(new Message_Fragment());
         fragments.add(new Topic_Fragment());
         fragments.add(new Circle_Fragment());
         fragments.add(new My_Fragment());
         FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager(),fragments);
         viewpageMain.setAdapter(fragmentAdapter);
+        radiogroupMain.setOnCheckedChangeListener(this);
         //mPresenter.getListNewsTab("");
-    }
-
-    @Override
-    protected IListNewsPresenter<ListNewsInterFace.ListNewsView> createPresenter() {
-        return new IListNewsPresenter<>();
-    }
-
-    @Override
-    protected int createLayoutId() {
-        GetWindowManagerUtils.changeStatusBarTextColor(MainActivity.this, true, R.color.theme_colors);
-
-        return R.layout.activity_main;
-    }
-
-    @Override
-    public void ShowLoadingAnimtion() {
-        dialog.show();
-    }
-
-    @Override
-    public void HideLoadingAnimtion() {
-        dialog.hide();
-    }
-
-    @Override
-    public void showListNewsTab(ListDataBean listDataBean) {
-        List<ListDataBean.NewsChannelListBean> newsChannelList = listDataBean.getNewsChannelList();
-        Log.e("MainActivity", "listDataBean:" + listDataBean.toString());
-    }
-
-    @Override
-    public void showError(String error) {
-
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,21 +66,21 @@ public class MainActivity extends BaseActivity<ListNewsInterFace.ListNewsView, I
         ButterKnife.bind(this);
     }
 
-    @Override
+ /*   @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId){
             case R.id.message_main:
-                viewpageMain.setCurrentItem(0);
-                break;
-            case R.id.topic_main:
                 viewpageMain.setCurrentItem(1);
                 break;
-            case R.id.circle_main:
+            case R.id.topic_main:
                 viewpageMain.setCurrentItem(2);
                 break;
-            case R.id.my_main:
+            case R.id.circle_main:
                 viewpageMain.setCurrentItem(3);
                 break;
+            case R.id.my_main:
+                viewpageMain.setCurrentItem(4);
+                break;
         }
-    }
+    }*/
 }

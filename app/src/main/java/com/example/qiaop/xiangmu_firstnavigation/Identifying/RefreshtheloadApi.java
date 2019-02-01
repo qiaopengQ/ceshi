@@ -1,6 +1,6 @@
 package com.example.qiaop.xiangmu_firstnavigation.Identifying;
 
 public enum  RefreshtheloadApi {
-    UpListNews,//刷新
-    DownListNews,//加载
+    UPLISTNEWS,//刷新
+    DOWNLISTNEWS,//加载
 }
